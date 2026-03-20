@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MOT Booking Helper App</title>
+
   <style>
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -15,31 +16,71 @@
       min-height: 100vh;
       margin: 0;
     }
+
     .container {
       max-width: 700px;
       padding: 32px;
+      text-align: center;
     }
+
     h1 {
       font-size: 2.2rem;
       margin-bottom: 8px;
     }
+
     p {
       line-height: 1.6;
       color: #cbd5f5;
     }
+
     a {
       color: #60a5fa;
+      text-decoration: none;
     }
+
     footer {
-      margin-top: 24px;
+      margin-top: 32px;
       font-size: 0.9rem;
-      opacity: 0.8;
+      opacity: 0.9;
     }
+
+    /* Store buttons */
+    .store-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .store-buttons img {
+      height: 50px;
+      transition: transform 0.2s ease;
+    }
+
+    .store-buttons img:hover {
+      transform: scale(1.05);
+    }
+
+    .disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .coming-soon {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
   </style>
 </head>
+
 <body>
   <div class="container">
+
     <h1>MOT Booking Helper</h1>
+
     <p>
       MOT Booking Helper is an independent mobile application designed to help users organise
       and track MOT appointments in Northern Ireland. The app provides quick access
@@ -48,16 +89,34 @@
 
     <p>
       MOT Booking Helper is not affiliated with the Driver &amp; Vehicle Agency (DVA).
-      
+      <br><br>
       MOT Booking Helper is part of the Digital Vehicle Apps Group.
     </p>
 
+    <!-- Store Buttons -->
+    <div class="store-buttons">
+
+      <!-- Google Play -->
+      <a href="https://play.google.com/store/apps/details?id=com.projectowner.dvapp" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+      </a>
+
+      <!-- App Store (disabled for now) -->
+      <a href="#" class="disabled">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+      </a>
+
+    </div>
+
+    <div class="coming-soon">
+      iOS version coming soon
+    </div>
+
     <footer>
       <p>Contact: <a href="mailto:dvapp.ni@gmail.com">dvapp.ni@gmail.com</a></p>
-      <p>
-        <a href="privacy.html">Privacy Policy</a>
-      </p>
+      <p><a href="privacy.html">Privacy Policy</a></p>
     </footer>
+
   </div>
 </body>
 </html>
