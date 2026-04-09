@@ -20,6 +20,7 @@
     .container {
       max-width: 700px;
       padding: 32px;
+      text-align: center;
     }
 
     h1 {
@@ -43,7 +44,6 @@
       opacity: 0.9;
     }
 
-    /* Store buttons */
     .store-buttons {
       display: flex;
       justify-content: center;
@@ -60,19 +60,6 @@
     .store-buttons img:hover {
       transform: scale(1.05);
     }
-
-    .disabled {
-      opacity: 0.5;
-      pointer-events: none;
-    }
-
-    .coming-soon-center {
-      text-align: center;
-      margin-top: 8px;
-      font-size: 0.85rem;
-      opacity: 0.7;
-    }
-
   </style>
 </head>
 
@@ -95,21 +82,14 @@
       MOT Booking Helper is part of the Digital Vehicle Apps Group.
     </p>
 
-    <!-- Store Buttons -->
     <div class="store-buttons">
-
-      <a href="https://play.google.com/store/apps/details?id=com.projectowner.dvapp" target="_blank">
+      <a href="https://play.google.com/store/apps/details?id=com.projectowner.dvapp" target="_blank" rel="noopener noreferrer">
         <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
       </a>
 
-      <a href="#" class="disabled">
+      <a href="https://apps.apple.com/us/app/mot-booking-helper/id6760940593" target="_blank" rel="noopener noreferrer">
         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
       </a>
-
-    </div>
-
-    <div class="coming-soon-center">
-      iOS version coming soon
     </div>
 
     <footer>
