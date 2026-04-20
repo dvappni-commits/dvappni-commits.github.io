@@ -52,14 +52,43 @@
       flex-wrap: wrap;
     }
 
-    .store-buttons img {
-      height: 50px;
-      transition: transform 0.2s ease;
+    /* Uniform button styling */
+    .store-buttons a,
+    .store-buttons .coming-soon {
+      width: 160px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1e293b;
+      border-radius: 10px;
+      padding: 8px;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
-    .store-buttons img:hover {
+    .store-buttons a:hover {
       transform: scale(1.05);
+      background: #334155;
     }
+
+    .store-buttons img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .coming-soon {
+      opacity: 0.5;
+      flex-direction: column;
+      font-size: 0.7rem;
+      color: #94a3b8;
+    }
+
+    .coming-soon span {
+      margin-top: 4px;
+    }
+
   </style>
 </head>
 
@@ -83,13 +112,33 @@
     </p>
 
     <div class="store-buttons">
-      <a href="https://play.google.com/store/apps/details?id=com.projectowner.dvapp" target="_blank" rel="noopener noreferrer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+
+      <!-- Google Play -->
+      <a href="https://play.google.com/store/apps/details?id=com.projectowner.dvapp" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
       </a>
 
-      <a href="https://apps.apple.com/us/app/mot-booking-helper/id6760940593" target="_blank" rel="noopener noreferrer">
-        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+      <!-- Apple Store -->
+      <a href="https://apps.apple.com/us/app/mot-booking-helper/id6760940593" target="_blank">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
       </a>
+
+      <!-- YouTube -->
+      <a href="https://youtube.com/@mot_b_h?si=PkpQ19ASwu3c2f8b" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/your-username" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+      </a>
+
+      <!-- Microsoft Store Coming Soon -->
+      <div class="coming-soon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+        <span>Coming Soon</span>
+      </div>
+
     </div>
 
     <footer>
